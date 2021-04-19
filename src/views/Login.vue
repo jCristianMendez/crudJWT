@@ -32,6 +32,7 @@
                 v-model="loginCred.email"
                 label="Email"
                 color="secondary"
+                v-on:keyup.enter="login"
               >
               </v-text-field>
               <v-text-field
@@ -43,6 +44,7 @@
                 @click:append="show1 = !show1"
                 label="Password"
                 color="secondary"
+                v-on:keyup.enter="login"
               >
               </v-text-field>
             </v-form>
@@ -94,6 +96,7 @@
                 @change="validateEmail"
                 :loading="loadingValidateEmail"
                 :readonly="loadingValidateEmail"
+                v-on:keyup.enter="createAccount"
               >
               </v-text-field>
               <v-text-field
@@ -105,6 +108,7 @@
                 @click:append="show1 = !show1"
                 label="Password"
                 color="secondary"
+                v-on:keyup.enter="createAccount"
               >
               </v-text-field>
 

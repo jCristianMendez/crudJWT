@@ -66,7 +66,9 @@
               {{ item.startPlayed }}
             </template>
             <template v-slot:no-data>
-              <v-btn color="primary" @click="initialize"> Reset </v-btn>
+              <v-btn @click="dialog = true" color="accent" dark class="mb-2">
+                New game
+              </v-btn>
             </template>
           </v-data-table>
         </v-col>
